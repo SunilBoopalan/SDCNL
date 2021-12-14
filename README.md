@@ -54,4 +54,4 @@ The below list details how to utilize the SDCNL method. All models and code are 
 
 ## Citation
 
-If you found my code useful. please help me to make it better
+If you found my code useful, please help me to make it better.
