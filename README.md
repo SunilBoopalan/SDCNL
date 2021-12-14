@@ -35,9 +35,9 @@ The data is provided in ```.csv``` format. To scrape more recent data, use the [
 
 A brief summary of our results and figures are shown below.
 
-![](https://github.com/ayaanzhaque/SDCNL/blob/main/figs/finalroc.png?raw=true)
+![](https://github.com/SunilBoopalan/SDCNL/blob/main/figs/finalroc.png?raw=true)
 
-![](https://github.com/ayaanzhaque/SDCNL/blob/main/figs/finaltable.png?raw=true)
+![](https://github.com/SunilBoopalan/SDCNL/blob/main/figs/finaltable.png?raw=true)
 
 ## Code
 
@@ -45,24 +45,13 @@ Our scripts and code are provided in the repo.
 
 The below list details how to utilize the SDCNL method. All models and code are implemented with proper hyperparameters.
 
-1. [```Embedding Models (Transformer)```](https://github.com/ayaanzhaque/SDCNL/blob/main/word_embeddings.py) - convert raw text to word embeddngs
+1. [```Embedding Models (Transformer)```](https://github.com/SunilBoopalan/SDCNL/blob/main/word_embeddings.py) - convert raw text to word embeddngs
 2. Label Correction
-    - [```Dimensionality Reduction```](https://github.com/ayaanzhaque/SDCNL/blob/main/clustering-based-label-correction.py) - Reduce the dimensions of the word embeddings for clustering
-    - [```Clustering Method```](https://github.com/ayaanzhaque/SDCNL/blob/main/clustering-based-label-correction.py) - Cluster the word embeddings to assign labels based on class probabilities
-    - [```Threshold-based correction```](https://github.com/ayaanzhaque/SDCNL/blob/main/threshold-based-correction.py) - use a threshold to determine whether to use the ground truth label or unsupervised clustering label
-3. [```Classification```](https://github.com/ayaanzhaque/SDCNL/blob/main/classifiers.py) - use the word embedding features and corrected set of labels to train a final classifier
+    - [```Dimensionality Reduction```](https://github.com/SunilBoopalan/SDCNL/blob/main/clustering-based-label-correction.py) - Reduce the dimensions of the word embeddings for clustering
+    - [```Clustering Method```](https://github.com/SunilBoopalan/SDCNL/blob/main/clustering-based-label-correction.py) - Cluster the word embeddings to assign labels based on class probabilities
+    - [```Threshold-based correction```](https://github.com/SunilBoopalan/SDCNL/blob/main/threshold-based-correction.py) - use a threshold to determine whether to use the ground truth label or unsupervised clustering label
+3. [```Classification```](https://github.com/SunilBoopalan/SDCNL/blob/main/classifiers.py) - use the word embedding features and corrected set of labels to train a final classifier
 
 ## Citation
 
-If you found our code or paper useful, please consider citing.
-
-```
-@misc{haque2021deep,
-      title={Deep Learning for Suicide and Depression Identification with Unsupervised Label Correction}, 
-      author={Ayaan Haque and Viraaj Reddi and Tyler Giallanza},
-      year={2021},
-      eprint={2102.09427},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
-}
-```
+If you found my code or paper useful, PL
