@@ -11,7 +11,7 @@ Early detection of suicidal ideation in depressed individuals can allow for adeq
     <a href="">
         <img src=""alt=""/>
         <br />
-        Read more...
+        SDCNL : Suicide and Depression Classification with Natural Language processing
     </a>
 </p>
 
