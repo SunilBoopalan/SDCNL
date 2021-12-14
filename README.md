@@ -1,4 +1,4 @@
-# [SDCNL](https://ayaanzhaque.github.io/SDCNL/) [Under Construction]
+# [SDCNL](https://SunilBoopalan.github.io/SDCNL/) [Under Construction]
 
 This repository contains the implementation of the paper "Deep Learning for Suicide and Depression Identification with Unsupervised Label Correction" by Sunil Boopalan from SRM Institute of Science and Technology 2021.
 
@@ -21,15 +21,15 @@ Early detection of suicidal ideation in depressed individuals can allow for adeq
 
 ## Methods
 
-![](https://github.com/ayaanzhaque/SDCNL/blob/main/figs/pipeline.png?raw=true)
+![](https://github.com/SunilBoopalan/SDCNL/blob/main/figs/pipeline.png?raw=true)
 
 The SDCNL method is outlined in the figure above. We begin by processing text data scraped from Reddit with word embedding models, which convert raw text into numerical representations called embeddings. These embeddings are then processed with an unsupervised dimensionality reduction algorithm. This is a necessary procedure due to the nature of clustering algorithms, which do not perform well in high-dimensional domains. The reduced embeddings are then inputted into a clustering-based algorithm which separates the embeddings into a pre-determined number of classes. This clustering algorithm is unsupervised, allowing it to be independent of noise in the labels. The class predictions of the algorithm are treated as an alternate set of labels, and these predicted labels are compared against the ground-truth labels using a confidence-based thresholding procedure in order to correct the ground-truth labels. The corrected set of labels are then used to train a deep neural classifier in a supervised fashion.
 
 ## Datasets
 
-We provide our data with the proper train/test split in the [```data```](https://github.com/ayaanzhaque/SDCNL/tree/main/data) folder. We develop a primary dataset based on our task of suicide or depression classification. This dataset is web-scraped from Reddit. We collect our data from subreddits using the Python [Reddit API](https://www.reddit.com/wiki/api). We specifically scrape from two subreddits, [r/SuicideWatch](https://www.reddit.com/r/SuicideWatch/) and [r/Depression](https://www.reddit.com/r/depression/). The dataset contains 1,895 total posts. We utilize two fields from the scraped data: the original text of the post as our inputs, and the subreddit it belongs to as labels. Posts from r/SuicideWatch are labeled as suicidal, and posts from r/Depression are labeled as depressed.
+We provide our data with the proper train/test split in the [```data```](https://github.com/SunilBoopalan/SDCNL/tree/main/data) folder. We develop a primary dataset based on our task of suicide or depression classification. This dataset is web-scraped from Reddit. We collect our data from subreddits using the Python [Reddit API](https://www.reddit.com/wiki/api). We specifically scrape from two subreddits, [r/SuicideWatch](https://www.reddit.com/r/SuicideWatch/) and [r/Depression](https://www.reddit.com/r/depression/). The dataset contains 1,895 total posts. We utilize two fields from the scraped data: the original text of the post as our inputs, and the subreddit it belongs to as labels. Posts from r/SuicideWatch are labeled as suicidal, and posts from r/Depression are labeled as depressed.
 
-The data is provided in ```.csv``` format. To scrape more recent data, use the [```web-scraper.py```](https://github.com/ayaanzhaque/SDCNL/blob/main/web-scraper.py) script.
+The data is provided in ```.csv``` format. To scrape more recent data, use the [```web-scraper.py```](https://github.com/SunilBoopalan/SDCNL/blob/main/web-scraper.py) script.
 
 ## Results
 
@@ -54,4 +54,4 @@ The below list details how to utilize the SDCNL method. All models and code are 
 
 ## Citation
 
-If you found my code or paper useful, PL
+If you found my code useful. please help me to make it better
