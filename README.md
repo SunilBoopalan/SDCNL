@@ -21,23 +21,23 @@ Early detection of suicidal ideation in depressed individuals can allow for adeq
 
 ## Methods
 
-![](https://github.com/SunilBoopalan/Suicide & Depression Classification with nlp/blob/main/figs/pipeline.png?raw=true)
+![](https://github.com/SunilBoopalan/Suicide-Depression-Classification-with-nlp/blob/main/figs/pipeline.png?raw=true)
 
 The SDCNL method is outlined in the figure above. We begin by processing text data scraped from Reddit with word embedding models, which convert raw text into numerical representations called embeddings. These embeddings are then processed with an unsupervised dimensionality reduction algorithm. This is a necessary procedure due to the nature of clustering algorithms, which do not perform well in high-dimensional domains. The reduced embeddings are then inputted into a clustering-based algorithm which separates the embeddings into a pre-determined number of classes. This clustering algorithm is unsupervised, allowing it to be independent of noise in the labels. The class predictions of the algorithm are treated as an alternate set of labels, and these predicted labels are compared against the ground-truth labels using a confidence-based thresholding procedure in order to correct the ground-truth labels. The corrected set of labels are then used to train a deep neural classifier in a supervised fashion.
 
 ## Datasets
 
-We provide our data with the proper train/test split in the [```data```](https://github.com/SunilBoopalan/SDCNL/tree/main/data) folder. We develop a primary dataset based on our task of suicide or depression classification. This dataset is web-scraped from Reddit. We collect our data from subreddits using the Python [Reddit API](https://www.reddit.com/wiki/api). We specifically scrape from two subreddits, [r/SuicideWatch](https://www.reddit.com/r/SuicideWatch/) and [r/Depression](https://www.reddit.com/r/depression/). The dataset contains 1,895 total posts. We utilize two fields from the scraped data: the original text of the post as our inputs, and the subreddit it belongs to as labels. Posts from r/SuicideWatch are labeled as suicidal, and posts from r/Depression are labeled as depressed.
+We provide our data with the proper train/test split in the [```data```](https://github.com/SunilBoopalan/Suicide-Depression-Classification-with-nlp/tree/main/data) folder. We develop a primary dataset based on our task of suicide or depression classification. This dataset is web-scraped from Reddit. We collect our data from subreddits using the Python [Reddit API](https://www.reddit.com/wiki/api). We specifically scrape from two subreddits, [r/SuicideWatch](https://www.reddit.com/r/SuicideWatch/) and [r/Depression](https://www.reddit.com/r/depression/). The dataset contains 1,895 total posts. We utilize two fields from the scraped data: the original text of the post as our inputs, and the subreddit it belongs to as labels. Posts from r/SuicideWatch are labeled as suicidal, and posts from r/Depression are labeled as depressed.
 
-The data is provided in ```.csv``` format. To scrape more recent data, use the [```web-scraper.py```](https://github.com/SunilBoopalan/SDCNL/blob/main/web-scraper.py) script.
+The data is provided in ```.csv``` format. To scrape more recent data, use the [```web-scraper.py```](https://github.com/SunilBoopalan/Suicide-Depression-Classification-with-nlp/blob/main/web-scraper.py) script.
 
 ## Results
 
 A brief summary of our results and figures are shown below.
 
-![](https://github.com/SunilBoopalan/SDCNL/blob/main/figs/finalroc.png?raw=true)
+![](https://github.com/SunilBoopalan/Suicide-Depression-Classification-with-nlp/blob/main/figs/finalroc.png?raw=true)
 
-![](https://github.com/SunilBoopalan/SDCNL/blob/main/figs/finaltable.png?raw=true)
+![](https://github.com/SunilBoopalan/Suicide-Depression-Classification-with-nlp/blob/main/figs/finaltable.png?raw=true)
 
 ## Code
 
@@ -45,12 +45,12 @@ Our scripts and code are provided in the repo.
 
 The below list details how to utilize the SDCNL method. All models and code are implemented with proper hyperparameters.
 
-1. [```Embedding Models (Transformer)```](https://github.com/SunilBoopalan/SDCNL/blob/main/word_embeddings.py) - convert raw text to word embeddngs
+1. [```Embedding Models (Transformer)```](https://github.com/SunilBoopalan/Suicide-Depression-Classification-with-nlp/blob/main/word_embeddings.py) - convert raw text to word embeddngs
 2. Label Correction
-    - [```Dimensionality Reduction```](https://github.com/SunilBoopalan/SDCNL/blob/main/clustering-based-label-correction.py) - Reduce the dimensions of the word embeddings for clustering
-    - [```Clustering Method```](https://github.com/SunilBoopalan/SDCNL/blob/main/clustering-based-label-correction.py) - Cluster the word embeddings to assign labels based on class probabilities
-    - [```Threshold-based correction```](https://github.com/SunilBoopalan/SDCNL/blob/main/threshold-based-correction.py) - use a threshold to determine whether to use the ground truth label or unsupervised clustering label
-3. [```Classification```](https://github.com/SunilBoopalan/SDCNL/blob/main/classifiers.py) - use the word embedding features and corrected set of labels to train a final classifier
+    - [```Dimensionality Reduction```](https://github.com/SunilBoopalan/Suicide-Depression-Classification-with-nlp/blob/main/clustering-based-label-correction.py) - Reduce the dimensions of the word embeddings for clustering
+    - [```Clustering Method```](https://github.com/SunilBoopalan/Suicide-Depression-Classification-with-nlp/blob/main/clustering-based-label-correction.py) - Cluster the word embeddings to assign labels based on class probabilities
+    - [```Threshold-based correction```](https://github.com/SunilBoopalan/Suicide-Depression-Classification-with-nlp/blob/main/threshold-based-correction.py) - use a threshold to determine whether to use the ground truth label or unsupervised clustering label
+3. [```Classification```](https://github.com/SunilBoopalan/Suicide-Depression-Classification-with-nlp/blob/main/classifiers.py) - use the word embedding features and corrected set of labels to train a final classifier
 
 ## Citation
 
