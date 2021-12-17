@@ -1,17 +1,17 @@
-# [SDCNL](https://SunilBoopalan.github.io/SDCNL/) [Under Construction]
+# [Suicide & Depression Classification with nlp](https://SunilBoopalan.github.io/SDCNL/) [Under Construction]
 
 This repository contains the implementation of the paper "Deep Learning for Suicide and Depression Identification with Unsupervised Label Correction" by Sunil Boopalan from SRM Institute of Science and Technology 2021.
 
-We present SDCNL to address the unexplored issue of classifying between depression and more severe suicidal tendencies using web-scraped data. In particular, we leverage Reddit data, develop a novel label correction method to remove inherent noise in the data using unsupervised learning, and develop a deep-learning classifier based on pre-trained transformers.
+We present Suicide & Depression Classification with nlp to address the unexplored issue of classifying between depression and more severe suicidal tendencies using web-scraped data. In particular, we leverage Reddit data, develop a novel label correction method to remove inherent noise in the data using unsupervised learning, and develop a deep-learning classifier based on pre-trained transformers.
 
 
-Early detection of suicidal ideation in depressed individuals can allow for adequate medical attention and support, which in many cases is life-saving. Recent NLP research focuses on classifying, from a given piece of text, if an individual is suicidal or clinically healthy. However, there have been no major attempts to differentiate between depression and suicidal ideation, which is an important clinical challenge. Due to the scarce availability of EHR data, suicide notes, or other similar verified sources, web query data has emerged as a promising alternative. Online sources, such as Reddit, allow for anonymity that prompts honest disclosure of symptoms, making it a plausible source even in a clinical setting. However, these online datasets also result in lower performance, which can be attributed to the inherent noise in web-scraped labels, which necessitates a noise-removal process. Thus, we propose SDCNL, a suicide versus depression classification method through a deep learning approach. We utilize online content from Reddit to train our algorithm, and to verify and correct noisy labels, we propose a novel unsupervised label correction method which, unlike previous work, does not require prior noise distribution information. Our extensive experimentation with multiple deep word embedding models and classifiers display the strong performance of the method in anew, challenging classification application.
+Early detection of suicidal ideation in depressed individuals can allow for adequate medical attention and support, which in many cases is life-saving. Recent NLP research focuses on classifying, from a given piece of text, if an individual is suicidal or clinically healthy. However, there have been no major attempts to differentiate between depression and suicidal ideation, which is an important clinical challenge. Due to the scarce availability of EHR data, suicide notes, or other similar verified sources, web query data has emerged as a promising alternative. Online sources, such as Reddit, allow for anonymity that prompts honest disclosure of symptoms, making it a plausible source even in a clinical setting. However, these online datasets also result in lower performance, which can be attributed to the inherent noise in web-scraped labels, which necessitates a noise-removal process. Thus, we propose Suicide & Depression Classification with nlp, a suicide versus depression classification method through a deep learning approach. We utilize online content from Reddit to train our algorithm, and to verify and correct noisy labels, we propose a novel unsupervised label correction method which, unlike previous work, does not require prior noise distribution information. Our extensive experimentation with multiple deep word embedding models and classifiers display the strong performance of the method in anew, challenging classification application.
 
 <p align="center">
     <a href="">
         <img src=""alt=""/>
         <br />
-        SDCNL : Suicide and Depression Classification with Natural Language processing
+         Suicide and Depression Classification with Natural Language processing
     </a>
 </p>
 
@@ -21,7 +21,7 @@ Early detection of suicidal ideation in depressed individuals can allow for adeq
 
 ## Methods
 
-![](https://github.com/SunilBoopalan/SDCNL/blob/main/figs/pipeline.png?raw=true)
+![](https://github.com/SunilBoopalan/Suicide & Depression Classification with nlp/blob/main/figs/pipeline.png?raw=true)
 
 The SDCNL method is outlined in the figure above. We begin by processing text data scraped from Reddit with word embedding models, which convert raw text into numerical representations called embeddings. These embeddings are then processed with an unsupervised dimensionality reduction algorithm. This is a necessary procedure due to the nature of clustering algorithms, which do not perform well in high-dimensional domains. The reduced embeddings are then inputted into a clustering-based algorithm which separates the embeddings into a pre-determined number of classes. This clustering algorithm is unsupervised, allowing it to be independent of noise in the labels. The class predictions of the algorithm are treated as an alternate set of labels, and these predicted labels are compared against the ground-truth labels using a confidence-based thresholding procedure in order to correct the ground-truth labels. The corrected set of labels are then used to train a deep neural classifier in a supervised fashion.
 
