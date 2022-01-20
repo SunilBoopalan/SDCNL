@@ -1,4 +1,4 @@
-# [Suicide & Depression Classification with nlp](https://SunilBoopalan.github.io/SDCNL/) [Under Construction]
+# [Suicide & Depression Classification with nlp](https://github.com/SunilBoopalan/Suicide-Depression-Classification-with-nlp) [Under Construction]
 
 This repository contains the implementation of the paper "Deep Learning for Suicide and Depression Identification with Unsupervised Label Correction" by Sunil Boopalan from SRM Institute of Science and Technology 2021.
 
